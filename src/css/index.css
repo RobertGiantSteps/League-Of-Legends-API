@@ -1,0 +1,92 @@
+body {
+    background: #0c0d4b;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 600px; 
+    height: 200px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: goldenrod;
+    border-radius: 8px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Grid */
+
+#cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 30px 30px;
+    width: 100%;
+    margin: 40px;
+}
+
+.card {
+    border-radius: 8px;    
+    display: flex;
+    flex-direction: column;
+    max-width: 308px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0px 0px;  
+}
+
+.card:hover img {
+    display:none;
+}
+.card:hover img{
+    display: inline-block;
+    animation: scale-card 1s forwards;
+}
+
+@keyframes scale-card {
+    100% { transform: scale(1.1)}
+}
+
+#name {
+    background-color: rgb(180, 135, 19);
+    padding:20px 20px;
+    border-radius: 0px 0px 8px 8px;
+    text-align: center;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#champ-image {
+    overflow: hidden;
+}
